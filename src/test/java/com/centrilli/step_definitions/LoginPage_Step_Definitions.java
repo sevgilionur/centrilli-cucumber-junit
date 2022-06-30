@@ -39,4 +39,9 @@ public class LoginPage_Step_Definitions {
     public void userLandsOnHomepageAsInventorymanager() {
         Assert.assertTrue(loginPage.username.getText().contains("InventoryManager"));
     }
+
+    @Then("User lands on homepage as expensesmanager")
+    public void userLandsOnHomepageAsExpensesmanager() {
+        Assert.assertTrue(loginPage.username.getText().contains("ExpensesManager"));
+    }
 }
