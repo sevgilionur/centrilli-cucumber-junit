@@ -9,15 +9,17 @@ import org.openqa.selenium.TakesScreenshot;
 public class Hooks {
 
     @After
-    public void teardownScenario(Scenario scenario){
+    public void teardownScenario(Scenario scenario) throws InterruptedException {
 
         //if scenario fails take screenshot
         if (scenario.isFailed()){
 
-            byte [] screenshot = ((TakesScreenshot)Driver.setDriver()).getScreenshotAs(OutputType.BYTES);
+            byte [] screenshot = ((TakesScreenshot)Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
-        Driver.quitBrowser();
+
+        //Thread.sleep(1000);
+        Driver.closeDriver();
     }
 }

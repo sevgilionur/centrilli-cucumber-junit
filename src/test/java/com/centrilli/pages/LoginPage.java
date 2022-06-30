@@ -9,7 +9,7 @@ public class LoginPage {
 
     public LoginPage(){
 
-        PageFactory.initElements(Driver.setDriver(), this);
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
@@ -21,6 +21,14 @@ public class LoginPage {
 
     @FindBy(css = ".btn-primary")
     public WebElement loginButton;
+
+    @FindBy(xpath = "//span[@class='oe_topbar_name']")
+    public WebElement username;
+
+
+
+
+
 
 
 }
