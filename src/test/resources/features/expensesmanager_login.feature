@@ -1,7 +1,6 @@
 Feature: Login Functionality
   As a registered I should be able to login to my account so that I can use the modules.
 
-  @wip
   Scenario Outline: Verify that I can login with valid credentials as expensesmanager by clicking enter
     When User goes to application page
     And User enters valid "<email>" and "<password>" and clicks enter
