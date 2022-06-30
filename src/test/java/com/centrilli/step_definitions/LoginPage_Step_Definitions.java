@@ -49,4 +49,15 @@ public class LoginPage_Step_Definitions {
     public void userLandsOnHomepageAsManufacturingUser() {
         Assert.assertTrue(loginPage.username.getText().contains("ManufacturingUser"));
     }
+
+    @And("User enters valid {string} and {string}")
+    public void userEntersValidAnd(String email, String password) {
+        loginPage.email.sendKeys(email);
+        loginPage.password.sendKeys(password);
+    }
+
+    @And("User clicks login button")
+    public void userClicksLoginButton() {
+        loginPage.loginButton.click();
+    }
 }
