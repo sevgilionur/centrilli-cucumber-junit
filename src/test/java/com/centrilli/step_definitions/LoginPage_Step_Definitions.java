@@ -7,7 +7,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 
 public class LoginPage_Step_Definitions {
@@ -59,5 +62,65 @@ public class LoginPage_Step_Definitions {
     @And("User clicks login button")
     public void userClicksLoginButton() {
         loginPage.loginButton.click();
+    }
+
+
+    @And("User enters invalid {string} , valid {string} and clicks enter")
+    public void userEntersInvalidValidAndClicksEnter(String email, String password) {
+        loginPage.email.sendKeys(email);
+        loginPage.password.sendKeys(password + Keys.ENTER);
+    }
+
+    @Then("User gets Wrong login or password message")
+    public void userGetsWrongLoginOrPasswordMessage() {
+        Assert.assertTrue(loginPage.errorMessage.isDisplayed());
+    }
+
+    @And("User enters valid {string} , invalid {string} and clicks enter")
+    public void userEntersValidInvalidAndClicksEnter(String email, String password) {
+        loginPage.email.sendKeys(email);
+        loginPage.password.sendKeys(password + Keys.ENTER);
+    }
+
+    @And("User enters invalid {string} , valid {string} and clicks login button")
+    public void userEntersInvalidValidAndClicksLoginButton(String email, String password) {
+        loginPage.email.sendKeys(email);
+        loginPage.password.sendKeys(password);
+        loginPage.loginButton.click();
+    }
+
+    @And("User enters valid {string} , invalid {string} and clicks login button")
+    public void userEntersValidInvalidAndClicksLoginButton(String email, String password) {
+        loginPage.email.sendKeys(email);
+        loginPage.password.sendKeys(password);
+        loginPage.loginButton.click();
+    }
+
+    @And("User enters valid email {string}")
+    public void userEntersValid(String email) {
+        loginPage.email.sendKeys(email);
+
+    }
+
+    @And("User clicks the login button")
+    public void userClicksTheLoginButton() {
+        loginPage.loginButton.click();
+    }
+
+    @Then("User gets Please fill out this field message from password field")
+    public void userGetsPleaseFillOutThisFieldMessage() {
+        String message = loginPage.password.getAttribute("validationMessage");
+        Assert.assertEquals("Please fill out this field.", message);
+    }
+
+    @And("User enters valid password {string}")
+    public void userEntersValidPassword(String password) {
+        loginPage.password.sendKeys(password);
+    }
+
+    @Then("User gets Please fill out this field message from email field")
+    public void userGetsPleaseFillOutThisFieldMessageFromEmailField() {
+        String message = loginPage.email.getAttribute("validationMessage");
+        Assert.assertEquals("Please fill out this field.", message);
     }
 }

@@ -1,7 +1,7 @@
 Feature: Login Functionality
   As a registered I should be able to login to my account so that I can use the modules.
 
-  Scenario Outline: Verify that I can login with valid credentials as inventorymanager by clicking enter
+  Scenario Outline: Verify that user can login with valid credentials as inventorymanager by clicking enter
     When User goes to application page
     And User enters valid "<email>" and "<password>" and clicks enter
     Then User lands on homepage as inventorymanager
@@ -161,7 +161,7 @@ Feature: Login Functionality
       | imm160@info.com | inventorymanager      |
 
 
-  Scenario Outline: Verify that I can login with valid credentials as inventorymanager by clicking enter
+  Scenario Outline: Verify that user can login with valid credentials as inventorymanager by clicking enter
     When User goes to application page
     And User enters valid "<email>" and "<password>"
     And User clicks login button

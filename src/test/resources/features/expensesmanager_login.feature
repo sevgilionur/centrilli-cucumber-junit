@@ -110,7 +110,7 @@ Feature: Login Functionality
       | expensesmanager109@info.com | expensesmanager |
       | expensesmanager110@info.com | expensesmanager |
 
-  @wip
+
   Scenario Outline: Verify that I can login with valid credentials as expensesmanager by clicking enter
     When User goes to application page
     And User enters valid "<email>" and "<password>"

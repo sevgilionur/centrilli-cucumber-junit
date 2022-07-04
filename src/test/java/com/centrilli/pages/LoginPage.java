@@ -25,6 +25,18 @@ public class LoginPage {
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement username;
 
+    @FindBy(xpath = "//p")
+    public WebElement errorMessage;
+
+    //String message = Driver.getDriver().findElement(By.name("login")).getAttribute("validationMessage");
+    //String message = loginPage.password.getAttribute("validationMessage");
+
+
+
+
+
+
+
 
 
 
