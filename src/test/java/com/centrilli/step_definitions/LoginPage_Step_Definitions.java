@@ -24,103 +24,106 @@ public class LoginPage_Step_Definitions {
 
     @And("User enters valid {string} and {string} and clicks enter")
     public void userEntersValidAndAndClicksEnter(String email, String password) {
-        loginPage.email.sendKeys(email);
-        loginPage.password.sendKeys(password+ Keys.ENTER);
+        loginPage.enterCredentials(email, password);
     }
 
     @Then("User lands on homepage as posmanager")
     public void userLandsOnHomepageAsPosmanager() {
-        Assert.assertTrue(loginPage.username.getText().contains("POSManager"));
+        Assert.assertTrue(loginPage.getUsername().getText().contains("POSManager"));
     }
 
     @Then("User lands on homepage as salesmanager")
     public void userLandsOnHomepageAsSalesmanager() {
-        Assert.assertTrue(loginPage.username.getText().contains("SalesManager"));
+        Assert.assertTrue(loginPage.getUsername().getText().contains("SalesManager"));
     }
 
     @Then("User lands on homepage as inventorymanager")
     public void userLandsOnHomepageAsInventorymanager() {
-        Assert.assertTrue(loginPage.username.getText().contains("InventoryManager"));
+        Assert.assertTrue(loginPage.getUsername().getText().contains("InventoryManager"));
     }
 
     @Then("User lands on homepage as expensesmanager")
     public void userLandsOnHomepageAsExpensesmanager() {
-        Assert.assertTrue(loginPage.username.getText().contains("ExpensesManager"));
+        Assert.assertTrue(loginPage.getUsername().getText().contains("ExpensesManager"));
     }
 
     @Then("User lands on homepage as manufacturing user")
     public void userLandsOnHomepageAsManufacturingUser() {
-        Assert.assertTrue(loginPage.username.getText().contains("ManufacturingUser"));
+        Assert.assertTrue(loginPage.getUsername().getText().contains("ManufacturingUser"));
     }
 
     @And("User enters valid {string} and {string}")
     public void userEntersValidAnd(String email, String password) {
-        loginPage.email.sendKeys(email);
-        loginPage.password.sendKeys(password);
+        loginPage.enterCredentials(email,password);
     }
 
     @And("User clicks login button")
     public void userClicksLoginButton() {
-        loginPage.loginButton.click();
+        loginPage.getLoginButton().click();
     }
 
 
     @And("User enters invalid {string} , valid {string} and clicks enter")
     public void userEntersInvalidValidAndClicksEnter(String email, String password) {
-        loginPage.email.sendKeys(email);
-        loginPage.password.sendKeys(password + Keys.ENTER);
+        loginPage.getEmail().sendKeys(email);
+        loginPage.getPassword().sendKeys(password + Keys.ENTER);
     }
 
     @Then("User gets Wrong login or password message")
     public void userGetsWrongLoginOrPasswordMessage() {
-        Assert.assertTrue(loginPage.errorMessage.isDisplayed());
+        Assert.assertTrue(loginPage.getErrorMessage().isDisplayed());
     }
 
     @And("User enters valid {string} , invalid {string} and clicks enter")
     public void userEntersValidInvalidAndClicksEnter(String email, String password) {
-        loginPage.email.sendKeys(email);
-        loginPage.password.sendKeys(password + Keys.ENTER);
+        loginPage.getEmail().sendKeys(email);
+        loginPage.getPassword().sendKeys(password + Keys.ENTER);
     }
 
     @And("User enters invalid {string} , valid {string} and clicks login button")
     public void userEntersInvalidValidAndClicksLoginButton(String email, String password) {
-        loginPage.email.sendKeys(email);
-        loginPage.password.sendKeys(password);
-        loginPage.loginButton.click();
+        loginPage.getEmail().sendKeys(email);
+        loginPage.getPassword().sendKeys(password);
+        loginPage.getLoginButton().click();
     }
 
     @And("User enters valid {string} , invalid {string} and clicks login button")
     public void userEntersValidInvalidAndClicksLoginButton(String email, String password) {
-        loginPage.email.sendKeys(email);
-        loginPage.password.sendKeys(password);
-        loginPage.loginButton.click();
+        loginPage.getEmail().sendKeys(email);
+        loginPage.getPassword().sendKeys(password);
+        loginPage.getLoginButton().click();
     }
 
     @And("User enters valid email {string}")
     public void userEntersValid(String email) {
-        loginPage.email.sendKeys(email);
+        loginPage.getEmail().sendKeys(email);
 
     }
 
     @And("User clicks the login button")
     public void userClicksTheLoginButton() {
-        loginPage.loginButton.click();
+        loginPage.getLoginButton().click();
     }
 
     @Then("User gets Please fill out this field message from password field")
     public void userGetsPleaseFillOutThisFieldMessage() {
-        String message = loginPage.password.getAttribute("validationMessage");
+        String message = loginPage.getPassword().getAttribute("validationMessage");
         Assert.assertEquals("Please fill out this field.", message);
     }
 
     @And("User enters valid password {string}")
     public void userEntersValidPassword(String password) {
-        loginPage.password.sendKeys(password);
+        loginPage.getPassword().sendKeys(password);
     }
 
     @Then("User gets Please fill out this field message from email field")
     public void userGetsPleaseFillOutThisFieldMessageFromEmailField() {
-        String message = loginPage.email.getAttribute("validationMessage");
+        String message = loginPage.getEmail().getAttribute("validationMessage");
         Assert.assertEquals("Please fill out this field.", message);
+    }
+
+    @When("User goes to application page onur")
+    public void userGoesToApplicationPageOnur() {
+
     }
 }

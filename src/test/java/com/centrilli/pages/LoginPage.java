@@ -1,6 +1,7 @@
 package com.centrilli.pages;
 
 import com.centrilli.utilities.Driver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,19 +15,45 @@ public class LoginPage {
     }
 
     @FindBy(id = "login")
-    public WebElement email;
+    private WebElement email;
 
     @FindBy(xpath = "//*[@id='password']")
-    public WebElement password;
+    private WebElement password;
 
     @FindBy(css = ".btn-primary")
-    public WebElement loginButton;
+    private WebElement loginButton;
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
-    public WebElement username;
+    private WebElement username;
 
     @FindBy(xpath = "//p")
-    public WebElement errorMessage;
+    private WebElement errorMessage;
+
+    public WebElement getEmail() {
+        return email;
+    }
+
+    public WebElement getPassword() {
+        return password;
+    }
+
+    public WebElement getLoginButton() {
+        return loginButton;
+    }
+
+    public WebElement getUsername() {
+        return username;
+    }
+
+    public WebElement getErrorMessage() {
+        return errorMessage;
+    }
+
+    public void enterCredentials(String email, String password) {
+        this.email.sendKeys(email);
+        this.password.sendKeys(password);
+    }
+
 
     //String message = Driver.getDriver().findElement(By.name("login")).getAttribute("validationMessage");
     //String message = loginPage.password.getAttribute("validationMessage");
