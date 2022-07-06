@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage_MKemal {
-    public LoginPage_MKemal(){
+    public LoginPage_MKemal() {
 
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -30,13 +30,20 @@ public class LoginPage_MKemal {
     public void enterCridentials(String email, String password) {
         this.email.sendKeys(email);
         this.password.sendKeys(password);
-        
+
     }
 
-    public void getText(){
+    public void getText() {
         email.getText();
     }
-    public void commit (){
+
+    public void CONFLICKT() {
         email.getText();
+
     }
+
+    public void newMethod() {
+
+    }
+
 }
