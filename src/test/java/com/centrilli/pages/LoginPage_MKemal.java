@@ -32,4 +32,8 @@ public class LoginPage_MKemal {
         this.password.sendKeys(password);
         
     }
+
+    public void getText(){
+        email.getText();
+    }
 }
