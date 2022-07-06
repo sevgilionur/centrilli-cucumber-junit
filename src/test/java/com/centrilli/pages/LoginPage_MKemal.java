@@ -36,4 +36,7 @@ public class LoginPage_MKemal {
     public void getText(){
         email.getText();
     }
+    public void commit (){
+        email.getText();
+    }
 }
