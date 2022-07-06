@@ -53,9 +53,12 @@ public class LoginPage_Onur {
         this.password.sendKeys(password);
     }
 
-    public void newMethod(){
 
+    public void clickLoginButton() {
+        loginButton.click();
     }
+
+    public void method2(){}
 
 
     //String message = Driver.getDriver().findElement(By.name("login")).getAttribute("validationMessage");

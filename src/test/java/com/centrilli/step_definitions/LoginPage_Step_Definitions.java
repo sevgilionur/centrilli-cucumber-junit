@@ -5,6 +5,7 @@ import com.centrilli.utilities.BrowserUtilities;
 import com.centrilli.utilities.Driver;
 import com.centrilli.utilities.PropertyReader;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -29,6 +30,7 @@ public class LoginPage_Step_Definitions {
     public void userLandsOnHomepageAsPosmanager() {
         //Assert.assertTrue(loginPage.getUsername().getText().contains("POSManager"));
         BrowserUtilities.homePageVerification(loginPage.getUsername(), "POSManager");
+
     }
 
     @And("User enters valid {string} and {string}")
@@ -39,6 +41,8 @@ public class LoginPage_Step_Definitions {
     @And("User clicks login button")
     public void userClicksLoginButton() {
         loginPage.getLoginButton().click();
+        loginPage.clickLoginButton();
+
     }
 
     @And("User enters invalid {string} , valid {string} and clicks enter")
@@ -98,5 +102,6 @@ public class LoginPage_Step_Definitions {
         //Assert.assertEquals("Please fill out this field.", message);
         BrowserUtilities.fillOutMessage(loginPage.getEmail(), "Please fill out this field.");
     }
+
 
 }
