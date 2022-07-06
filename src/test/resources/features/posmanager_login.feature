@@ -7,10 +7,9 @@ Feature: Login Functionality
     Then User lands on homepage as posmanager
 
     Examples:
-      | email                  | password   |
-      | posmanager6@info.com   | posmanager |
-      | posmanager7@info.com   | posmanager |
-
+      | email                 | password   |
+      | posmanager12@info.com | posmanager |
+      | posmanager13@info.com | posmanager |
 
 
   Scenario Outline: Verify that I can login with valid credentials as posmanager by clicking login button
@@ -20,6 +19,6 @@ Feature: Login Functionality
     Then User lands on homepage as posmanager
 
     Examples:
-      | email                  | password   |
-      | posmanager6@info.com   | posmanager |
-      | posmanager7@info.com   | posmanager |
+      | email                 | password   |
+      | posmanager12@info.com | posmanager |
+      | posmanager13@info.com | posmanager |

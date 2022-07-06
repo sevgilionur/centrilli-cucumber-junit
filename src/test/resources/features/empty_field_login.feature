@@ -3,7 +3,7 @@ Feature: Login Functionality
 
 
   Scenario Outline: Verify that user got message if leaves password empty
-    When User goes to application page onur
+    When User goes to application page
     And User enters valid email "<email>"
     And User clicks the login button
     Then User gets Please fill out this field message from password field

@@ -22,7 +22,7 @@ public class LoginPage_Step_Definitions {
 
     @And("User enters valid {string} and {string} and clicks enter")
     public void userEntersValidAndAndClicksEnter(String email, String password) {
-        loginPage.enterCredentials(email, password);
+        loginPage.enterCredentials(email, password + Keys.ENTER);
     }
 
     @Then("User lands on homepage as posmanager")
@@ -98,6 +98,5 @@ public class LoginPage_Step_Definitions {
         //Assert.assertEquals("Please fill out this field.", message);
         BrowserUtilities.fillOutMessage(loginPage.getEmail(), "Please fill out this field.");
     }
-
 
 }
