@@ -7,10 +7,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 
 
 public class LoginPage_Step_Definitions {
@@ -122,8 +119,5 @@ public class LoginPage_Step_Definitions {
         Assert.assertEquals("Please fill out this field.", message);
     }
 
-    @When("User goes to application page onur")
-    public void userGoesToApplicationPageOnur() {
 
-    }
 }
