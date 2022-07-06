@@ -1,6 +1,6 @@
 package com.centrilli.step_definitions;
 
-import com.centrilli.pages.LoginPage;
+import com.centrilli.pages.LoginPage_Onur;
 import com.centrilli.utilities.BrowserUtilities;
 import com.centrilli.utilities.Driver;
 import com.centrilli.utilities.PropertyReader;
@@ -13,7 +13,7 @@ import org.openqa.selenium.Keys;
 
 public class LoginPage_Step_Definitions {
 
-    LoginPage loginPage = new LoginPage();
+    LoginPage_Onur loginPage = new LoginPage_Onur();
 
     @When("User goes to application page")
     public void user_goes_to_application_page() {

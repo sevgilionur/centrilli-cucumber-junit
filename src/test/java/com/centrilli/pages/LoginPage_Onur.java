@@ -1,14 +1,13 @@
 package com.centrilli.pages;
 
 import com.centrilli.utilities.Driver;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage_Onur {
 
-    public LoginPage(){
+    public LoginPage_Onur(){
 
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -52,6 +51,10 @@ public class LoginPage {
     public void enterCredentials(String email, String password) {
         this.email.sendKeys(email);
         this.password.sendKeys(password);
+    }
+
+    public void newMethod(){
+
     }
 
 
