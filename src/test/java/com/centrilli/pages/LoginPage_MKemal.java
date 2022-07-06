@@ -37,13 +37,13 @@ public class LoginPage_MKemal {
         email.getText();
     }
 
-    public void CONFLICKT() {
+    public void conflictOnur (){
         email.getText();
 
     }
 
-    public void newMethod() {
-
+    public void newMethod_Onur (){
+        email.getText();
     }
 
 }
