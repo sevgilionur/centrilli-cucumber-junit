@@ -33,6 +33,7 @@ public class LoginPage {
         return email;
     }
 
+
     public WebElement getPassword() {
         return password;
     }
@@ -52,6 +53,10 @@ public class LoginPage {
     public void enterCredentials(String email, String password) {
         this.email.sendKeys(email);
         this.password.sendKeys(password);
+    }
+
+    public void clickLoginButton() {
+    loginButton.click();
     }
 
 
