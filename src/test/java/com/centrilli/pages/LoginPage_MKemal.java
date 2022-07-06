@@ -36,7 +36,11 @@ public class LoginPage_MKemal {
     public void getText(){
         email.getText();
     }
-    public void commit (){
+    public void conflictOnur (){
         email.getText();
     }
+    public void newMethod_Onur (){
+        email.getText();
+    }
+
 }
