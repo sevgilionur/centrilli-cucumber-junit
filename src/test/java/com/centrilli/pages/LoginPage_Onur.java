@@ -32,7 +32,6 @@ public class LoginPage_Onur {
         return email;
     }
 
-
     public WebElement getPassword() {
         return password;
     }
