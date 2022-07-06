@@ -1,14 +1,13 @@
 package com.centrilli.pages;
 
 import com.centrilli.utilities.Driver;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LoginPage_Onur {
 
-    public LoginPage(){
+    public LoginPage_Onur(){
 
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -55,9 +54,12 @@ public class LoginPage {
         this.password.sendKeys(password);
     }
 
+
     public void clickLoginButton() {
-    loginButton.click();
+        loginButton.click();
     }
+
+    public void method2(){}
 
 
     //String message = Driver.getDriver().findElement(By.name("login")).getAttribute("validationMessage");
