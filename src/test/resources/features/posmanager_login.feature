@@ -13,8 +13,7 @@ Feature: Login Functionality
 
 
 
-
-  Scenario Outline: Verify that I can login with valid credentials as posmanager by clicking enter
+  Scenario Outline: Verify that I can login with valid credentials as posmanager by clicking login button
     When User goes to application page
     And User enters valid "<email>" and "<password>"
     And User clicks login button
