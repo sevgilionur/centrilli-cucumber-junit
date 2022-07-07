@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage_Yahya {
+public class LoginPage_Yahya  {
     public LoginPage_Yahya(){
 
         PageFactory.initElements(Driver.getDriver(), this);
