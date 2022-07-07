@@ -19,6 +19,7 @@ public class LoginStepDefs_Yahya {
     public void user_goes_to_the_application_login_page() {
         Driver.getDriver().get(PropertyReader.getProperty("url"));
     }
+
     @When("User enters valid email {string} and valid password {string} and press enter key")
     public void user_enters_valid_email_and_valid_password_and_press_enter_key(String email, String password) {
         loginPage_yahya.emailBox.sendKeys(email);
