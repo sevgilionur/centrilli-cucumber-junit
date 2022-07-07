@@ -21,7 +21,6 @@ public class Driver {
 
             switch (browserType){
                 case "chrome":
-
                     WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
                     driverPool.get().manage().window().maximize();
