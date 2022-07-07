@@ -7,7 +7,7 @@ Then User lands on homepage as salesmanager gy
 
 Examples:
 | email                 | password     |
-| salesmanager10@info.com   | salesmanager |
+| salesmanager100@info.com   | salesmanager |
 
 
 Scenario Outline: Verify that I can login with valid credentials as salesmanager by clicking login button
@@ -18,4 +18,4 @@ Then User lands on homepage as salesmanager gy
 
 Examples:
 | email                 | password     |
-| salesmanager10@info.com   | salesmanager |
+| salesmanager100@info.com   | salesmanager |
