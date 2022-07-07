@@ -90,7 +90,7 @@ Feature: Login Functionality
   Scenario Outline: Verify that the user can login with valid credentials as "manufacturing user" by pressing enter key
     When User goes to the application login page
     And  User enters valid email "<email>" and valid password "<password>" and press enter key
-    Then User on homepage as inventory manager
+    Then User on homepage as manufacturing user
     Examples:
       | email                 | password  |
       | manuf_user10@info.com | manufuser |
@@ -101,11 +101,10 @@ Feature: Login Functionality
     When User goes to the application login page
     And  User enters valid email "<email>" and valid password "<password>"
     And  User click on login button
-    Then User on homepage as inventory manager
+    Then User on homepage as manufacturing user
     Examples:
       | email                 | password  |
       | manuf_user10@info.com | manufuser |
       | manuf_user11@info.com | manufuser |
-
 
 
