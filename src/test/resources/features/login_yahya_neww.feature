@@ -1,7 +1,7 @@
 Feature: Login Functionality
   As a registered I should be able to login to my account so that I can use the modules.
 
-  @AC1
+  @yhy
   Scenario Outline: Verify that the user can login with valid credentials as "posmanager" by pressing enter key
     When User goes to the application login page
     And  User enters valid email "<email>" and valid password "<password>" and press enter key
@@ -11,7 +11,7 @@ Feature: Login Functionality
       | posmanager6@info.com | posmanager |
       | posmanager7@info.com | posmanager |
 
-  @ac1tc2pos
+  @yhy1
   Scenario Outline: Verify that the user can login with valid credentials as "posmanager" by clicking on login button
     When User goes to the application login page
     And  User enters valid email "<email>" and valid password "<password>"
@@ -29,8 +29,8 @@ Feature: Login Functionality
     Then User on homepage as salesmanager
     Examples:
       | email                  | password     |
-      | salesmanager5@info.com | salesmanager |
-      | salesmanager6@info.com | salesmanager |
+      | salesmanager10@info.com | salesmanager |
+      | salesmanager11@info.com | salesmanager |
 
   @ac1tc2sales
   Scenario Outline: Verify that the user can login with valid credentials as "sales manager" by clicking on login button
@@ -40,8 +40,8 @@ Feature: Login Functionality
     Then User on homepage as salesmanager
     Examples:
       | email                  | password     |
-      | salesmanager5@info.com | salesmanager |
-      | salesmanager6@info.com | salesmanager |
+      | salesmanager10@info.com | salesmanager |
+      | salesmanager11@info.com | salesmanager |
 
   @ac1tc1exp
   Scenario Outline: Verify that the user can login with valid credentials as "expense manager" by pressing enter key
@@ -50,8 +50,8 @@ Feature: Login Functionality
     Then User on homepage as expense manager
     Examples:
       | email                      | password        |
-      | expensesmanager10@info.com | expensesmanager |
-      | expensesmanager11@info.com | expensesmanager |
+      | expensesmanager20@info.com | expensesmanager |
+      | expensesmanager21@info.com | expensesmanager |
 
   @ac1tc2exp
   Scenario Outline: Verify that the user can login with valid credentials as "expense manager" by clicking on login button
@@ -62,8 +62,8 @@ Feature: Login Functionality
     Examples:
     Examples:
       | email                      | password        |
-      | expensesmanager10@info.com | expensesmanager |
-      | expensesmanager11@info.com | expensesmanager |
+      | expensesmanager20@info.com | expensesmanager |
+      | expensesmanager21@info.com | expensesmanager |
 
   @ac1tc1inv
   Scenario Outline: Verify that the user can login with valid credentials as "inventory manager" by pressing enter key
