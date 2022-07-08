@@ -15,7 +15,10 @@ import org.junit.runner.RunWith;
         glue = "com/centrilli/step_definitions",
         dryRun = false,
 
-        tags = "@onur",
+
+
+        tags = "@yhy1",
+
         publish = true
 
 )
