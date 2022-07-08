@@ -22,3 +22,5 @@ Feature: Login Functionality
       | email                 | password   |
       | posmanager12@info.com | posmanager |
       | posmanager13@info.com | posmanager |
+
+

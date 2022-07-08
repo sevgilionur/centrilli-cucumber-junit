@@ -1,7 +1,7 @@
 Feature: Login Functionality
   As a registered user should be able to login to my account so that I can use the modules.
 
-
+@onur
   Scenario Outline: Verify that user got message if leaves password empty
     When User goes to application page
     And User enters valid email "<email>"

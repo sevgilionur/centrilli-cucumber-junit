@@ -9,7 +9,7 @@ Examples:
 | email                 | password     |
 | salesmanager100@info.com   | salesmanager |
 
-
+@gungor
 Scenario Outline: Verify that I can login with valid credentials as salesmanager by clicking login button
 When User goes to application page gy
 And User enters valid "<email>" and "<password>" gy

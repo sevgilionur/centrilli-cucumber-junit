@@ -15,9 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/centrilli/step_definitions",
         dryRun = false,
 
-
-        tags = "tc1ac1pos",
-
+        tags = "@onur",
         publish = true
 
 )
