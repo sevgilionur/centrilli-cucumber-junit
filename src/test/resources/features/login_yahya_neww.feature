@@ -1,7 +1,7 @@
 Feature: Login Functionality
   As a registered I should be able to login to my account so that I can use the modules.
 
-  @ac1tc1pos
+  @AC1
   Scenario Outline: Verify that the user can login with valid credentials as "posmanager" by pressing enter key
     When User goes to the application login page
     And  User enters valid email "<email>" and valid password "<password>" and press enter key
@@ -106,5 +106,3 @@ Feature: Login Functionality
       | email                 | password  |
       | manuf_user10@info.com | manufuser |
       | manuf_user11@info.com | manufuser |
-
-

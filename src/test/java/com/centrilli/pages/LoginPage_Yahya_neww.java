@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage_Yahya {
-    public LoginPage_Yahya(){
+public class LoginPage_Yahya_neww {
+    public LoginPage_Yahya_neww(){
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -28,7 +28,8 @@ public class LoginPage_Yahya {
     @FindBy(xpath = "//button[@class='btn btn-primary']")
     public WebElement loginButton;
 
-
+    @FindBy(xpath = "//span[@class='oe_topbar_name']")
+    public WebElement usernameVerify;
 
     @FindBy(xpath = "//a[@class='btn btn-link pull-right']")
     public WebElement resetPasswordButton;
@@ -38,4 +39,3 @@ public class LoginPage_Yahya {
 
 
 }
-
