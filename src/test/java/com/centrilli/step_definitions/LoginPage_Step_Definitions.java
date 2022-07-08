@@ -89,6 +89,7 @@ public class LoginPage_Step_Definitions {
         //String message = loginPage.getPassword().getAttribute("validationMessage");
         //Assert.assertEquals("Please fill out this field.", message);
         BrowserUtilities.fillOutMessage(loginPage.getPassword(), "Please fill out this field.");
+        System.out.println(loginPage.getPassword().getAttribute("required"));
     }
 
     @And("User enters valid password {string}")
