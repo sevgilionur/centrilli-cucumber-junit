@@ -24,7 +24,7 @@ public class LoginStepDefiniton_Gungor {
 
     @Then("User lands on homepage as salesmanager gy")
     public void userLandsOnHomepageAsSalesmanagerGy() {
-        BrowserUtilities.homePageVerification(loginpage.username,"SalesManager");
+        BrowserUtilities.homePageVerification(loginpage.getUsername(),"SalesManager");
     }
 
     @And("User enters valid {string} and {string} gy")
@@ -34,6 +34,6 @@ public class LoginStepDefiniton_Gungor {
 
     @And("User clicks login button gy")
     public void userClicksLoginButtonGy() {
-        loginpage.loginButton.click();
+        loginpage.getLoginButton().click();
     }
 }

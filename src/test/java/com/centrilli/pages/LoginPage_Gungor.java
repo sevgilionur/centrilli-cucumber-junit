@@ -14,19 +14,39 @@ public class LoginPage_Gungor {
     }
 
     @FindBy(id = "login")
-    public WebElement email;
+    private WebElement email;
+
+    public WebElement getEmail(){
+        return email;
+    }
 
     @FindBy(xpath = "//*[@id='password']")
-    public WebElement password;
+    private WebElement password;
+
+    public WebElement getPassword(){
+        return password;
+    }
 
     @FindBy(css = ".btn-primary")
-    public WebElement loginButton;
+    private WebElement loginButton;
+
+    public WebElement getLoginButton(){
+        return loginButton;
+    }
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
-    public WebElement username;
+    private WebElement username;
+
+    public WebElement getUsername(){
+        return username;
+    }
 
     @FindBy(xpath = "//p")
-    public WebElement errorMessage;
+    private WebElement errorMessage;
+
+    public WebElement getErrorMessage(){
+        return errorMessage;
+    }
 
     public void enterCredentials(String email, String password) {
         this.email.sendKeys(email);
