@@ -1,6 +1,7 @@
 package com.centrilli.pages;
 
 import com.centrilli.utilities.Driver;
+import com.centrilli.utilities.PropertyReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
