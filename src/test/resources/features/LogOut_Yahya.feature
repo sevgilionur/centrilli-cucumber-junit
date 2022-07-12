@@ -3,7 +3,7 @@ Feature: Logout Feature
 
   @loyahya
   Scenario:
-    Given User on the homepage
+    Given User on the homepage yk
     When  User clicks on user dropdown menu
     Then  User clicks on logout button
     And   User logged out securely
