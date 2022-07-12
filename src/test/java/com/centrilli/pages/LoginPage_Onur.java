@@ -14,45 +14,21 @@ public class LoginPage_Onur {
     }
 
     @FindBy(id = "login")
-    private WebElement email;
+    public WebElement email;
 
     @FindBy(xpath = "//*[@id='password']")
-    private WebElement password;
+    public WebElement password;
 
     @FindBy(css = ".btn-primary")
-    private WebElement loginButton;
-
-    @FindBy(xpath = "//span[@class='oe_topbar_name']")
-    private WebElement username;
+    public WebElement loginButton;
 
     @FindBy(xpath = "//p")
-    private WebElement errorMessage;
-
-    public WebElement getEmail() {
-        return email;
-    }
-
-    public WebElement getPassword() {
-        return password;
-    }
-
-    public WebElement getLoginButton() {
-        return loginButton;
-    }
-
-    public WebElement getUsername() {
-        return username;
-    }
-
-    public WebElement getErrorMessage() {
-        return errorMessage;
-    }
+    public WebElement errorMessage;
 
     public void enterCredentials(String email, String password) {
         this.email.sendKeys(email);
         this.password.sendKeys(password);
     }
-
 
     public void clickLoginButton() {
         loginButton.click();
