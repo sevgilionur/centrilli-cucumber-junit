@@ -37,4 +37,23 @@ public class LoginStepDefinition_Murat {
         Assert.assertTrue(loginPage.userType.getText().contains("SalesManager"));
 
     }
+    @When("user clicks Reset Password link_me")
+    public void user_clicks_reset_password_link_me() {
+        loginPage.resetPasswordLink.click();
+
+    }
+    @Then("user sees Your Email  box_me")
+    public void user_sees_your_email_box_me()  {
+        Assert.assertTrue(loginPage.username.isDisplayed());
+       //Driver.getDriver().wait(3000);
+       String expectedURL="https://qa.centrilli.com/web/reset_password?";
+       String actualURL=Driver.getDriver().getCurrentUrl();
+        System.out.println(actualURL);
+          Assert.assertEquals(expectedURL,actualURL);
+
+
+
+    }
+
+
 }
