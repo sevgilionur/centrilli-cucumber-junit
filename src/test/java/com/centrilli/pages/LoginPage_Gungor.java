@@ -1,6 +1,9 @@
 package com.centrilli.pages;
 
 import com.centrilli.utilities.Driver;
+import com.centrilli.utilities.PropertyReader;
+import io.cucumber.java.en.Given;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -34,12 +37,6 @@ public class LoginPage_Gungor {
         return loginButton;
     }
 
-    @FindBy(xpath = "//span[@class='oe_topbar_name']")
-    private WebElement username;
-
-    public WebElement getUsername(){
-        return username;
-    }
 
     @FindBy(xpath = "//p")
     private WebElement errorMessage;
@@ -53,6 +50,7 @@ public class LoginPage_Gungor {
         this.password.sendKeys(password);
 
     }
+
 
     public void getText(){
         email.getText();

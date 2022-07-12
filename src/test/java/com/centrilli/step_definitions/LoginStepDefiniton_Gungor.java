@@ -1,10 +1,12 @@
 package com.centrilli.step_definitions;
 
 import com.centrilli.pages.LoginPage_Gungor;
+import com.centrilli.pages.NavigationBar_Gungor;
 import com.centrilli.utilities.BrowserUtilities;
 import com.centrilli.utilities.Driver;
 import com.centrilli.utilities.PropertyReader;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
@@ -12,6 +14,16 @@ import org.openqa.selenium.Keys;
 public class LoginStepDefiniton_Gungor {
 
     LoginPage_Gungor loginpage = new LoginPage_Gungor();
+    NavigationBar_Gungor navibar = new NavigationBar_Gungor();
+
+    @Given("User goes to application page enter valid {string} and {string} clicks enter")
+    public void userGoesToApplicationPageEnterValidAndClicksEnter(String email, String password) {
+        Driver.getDriver().get(PropertyReader.getProperty("url"));
+        loginpage.getEmail().sendKeys(email);
+        loginpage.getPassword().sendKeys(password + Keys.ENTER);
+    }
+
+
     @When("User goes to application page gy")
     public void userGoesToApplicationPageGy() {
         Driver.getDriver().get(PropertyReader.getProperty("url"));
@@ -24,7 +36,7 @@ public class LoginStepDefiniton_Gungor {
 
     @Then("User lands on homepage as salesmanager gy")
     public void userLandsOnHomepageAsSalesmanagerGy() {
-        BrowserUtilities.homePageVerification(loginpage.getUsername(),"SalesManager");
+        BrowserUtilities.homePageVerification(navibar.getUsername(),"SalesManager");
     }
 
     @And("User enters valid {string} and {string} gy")
