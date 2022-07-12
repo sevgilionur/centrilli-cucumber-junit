@@ -8,8 +8,13 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class LoginStepDefs_Mkemal {
     LoginPage_MKemal loginPage = new LoginPage_MKemal();
+
     @Given("I am on the login page_mks")
     public void iAmOnTheLoginPage_mks() {
         Driver.getDriver().get(PropertyReader.getProperty("url"));
@@ -24,5 +29,5 @@ public class LoginStepDefs_Mkemal {
     @When("I click enter I should be navigate to Dashboard_mks")
     public void iClickEnterIShouldBeNavigateToDashboard_mks() {
     }
-
 }
+
