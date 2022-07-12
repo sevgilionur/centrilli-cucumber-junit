@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/centrilli/step_definitions",
         dryRun = false,
 
+
         tags = "@logout",
 
         publish = true
