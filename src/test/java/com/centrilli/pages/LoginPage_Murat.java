@@ -23,6 +23,9 @@ public class LoginPage_Murat {
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement userType;
 
+    @FindBy(xpath = "//a[@class='btn btn-link pull-right']")
+    public WebElement resetPasswordLink;
+
 
 }
 
