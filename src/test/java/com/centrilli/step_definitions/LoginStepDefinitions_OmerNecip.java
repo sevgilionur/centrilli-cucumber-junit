@@ -8,10 +8,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.configuration.Configuration;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 public class LoginStepDefinitions_OmerNecip {
 
     LoginPage_OmerNecip loginPageOmerNecip=new LoginPage_OmerNecip();
+
+    @Given("User goes to application page enter valid {string} and {string} clicks_necip")
+    public void userGoesToApplicationPageEnterValidAndClicks_necip(String username, String password) {
+        Driver.getDriver().get(PropertyReader.getProperty("url"));
+        loginPageOmerNecip.usernameinput.sendKeys(username);
+        loginPageOmerNecip.passwordinput.sendKeys(password + Keys.ENTER);
+
+    }
 
     @Given("User goes to Centrilli page")
     public void user_goes_to_centrilli_page() {
@@ -82,4 +91,6 @@ public class LoginStepDefinitions_OmerNecip {
         String message = loginPageOmerNecip.usernameinput.getAttribute("validationMessage");
         Assert.assertEquals(expected, message);
     }
+
+
 }
