@@ -21,7 +21,7 @@ public class CreateContactN_Verify_Yahya {
     String name=faker.name().fullName();
     String adress=faker.address().streetAddress();
     String newName=faker.name().fullName();
-
+    WebDriverWait wait =new WebDriverWait(Driver.getDriver(),5);
 
 
 
@@ -44,7 +44,6 @@ public class CreateContactN_Verify_Yahya {
         contactPage_yhy.nameInputBox.sendKeys(name);
         contactPage_yhy.adressbox.sendKeys(adress);
         contactPage_yhy.saveButton.click();
-        WebDriverWait wait =new WebDriverWait(Driver.getDriver(),5);
         wait.until(ExpectedConditions.titleContains(name));
     }
 
@@ -57,16 +56,14 @@ public class CreateContactN_Verify_Yahya {
     public void user_Find_The_User_Using_SearchBar() {
     contactPage_yhy.searchBar.clear();
     contactPage_yhy.searchBar.sendKeys(name+ Keys.ENTER);
-        WebDriverWait wait =new WebDriverWait(Driver.getDriver(),5);
-        wait.until(ExpectedConditions.titleContains(name));
+    wait.until(ExpectedConditions.titleContains(name));
 
     }
     @And("Click on the contact's path")
     public void click_On_The_ContactS_Path() {
+        contactPage_yhy.UsernameToFind.sendKeys(name);
 
     }
-
-
     @When("User click on edit button")
     public void user_click_on_edit_button() {
         contactPage_yhy.editButton.click();
@@ -82,6 +79,15 @@ public class CreateContactN_Verify_Yahya {
     @Then("Verify user has edited the contact successfully")
     public void verify_user_has_edited_the_contact_successfully() {
         Assert.assertTrue(Driver.getDriver().getTitle().contains(newName));
+    }
+    @When("User click on list button")
+    public void user_click_on_list_button() {
+       contactPage_yhy.ListButton.click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 

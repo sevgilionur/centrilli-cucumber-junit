@@ -33,7 +33,14 @@ public class ContactPage_YHY {
 
     @FindBy(xpath = "//input[@placeholder='Search...']")
     public WebElement searchBar;
-    
+
+    @FindBy(xpath = "//*[.='name']")
+    public WebElement UsernameToFind;
+
+    @FindBy(xpath = "//button[@accesskey='l']")
+    public WebElement ListButton;
+
+
 
 
 
