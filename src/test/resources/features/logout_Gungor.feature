@@ -3,7 +3,7 @@ Feature: Logout Functionality
 @gungor
 
     Scenario Outline:Verify that user can log out via the logout button in the profile dropdown menu.
-      Given User goes to application page enter valid "<email>" and "<password>" clicks enter
+      Given User goes to application page enter valid "<email>" and "<password>" clicks enter gy
       When user clicks on username gy
       And user clicks on logout button gy
       Then user log out correctly gy

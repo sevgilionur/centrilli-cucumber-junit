@@ -23,12 +23,12 @@ public class LoginStepDefiniton_Gungor {
 
     @And("User enters valid {string} and {string} and clicks enter gy")
     public void userEntersValidAndAndClicksEnterGy(String email, String password) {
-       loginpage.enterCredentials(email,password+ Keys.ENTER);
+        loginpage.enterCredentials(email, password + Keys.ENTER);
     }
 
     @Then("User lands on homepage as salesmanager gy")
     public void userLandsOnHomepageAsSalesmanagerGy() {
-        BrowserUtilities.homePageVerification(navibar.getUsername(),"SalesManager");
+        BrowserUtilities.homePageVerification(navibar.getUsername(), "SalesManager");
     }
 
     @And("User enters valid {string} and {string} gy")
@@ -40,4 +40,13 @@ public class LoginStepDefiniton_Gungor {
     public void userClicksLoginButtonGy() {
         loginpage.getLoginButton().click();
     }
+    
+    @Given("User goes to application page enter valid {string} and {string} clicks enter gy")
+    public void userGoesToApplicationPageEnterValidAndClicksEnterGy(String email, String password) {
+        Driver.getDriver().get(PropertyReader.getProperty("url"));
+        loginpage.getEmail().sendKeys(email);
+        loginpage.getPassword().sendKeys(password + Keys.ENTER);
+    }
+
+
 }
