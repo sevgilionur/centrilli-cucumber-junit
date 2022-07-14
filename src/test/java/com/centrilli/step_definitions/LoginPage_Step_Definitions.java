@@ -105,5 +105,12 @@ public class LoginPage_Step_Definitions {
         BrowserUtilities.fillOutMessage(loginPage.email, "Please fill out this field.");
     }
 
+    @Given("User goes to application page enter valid {string} and {string} clicks enter")
+    public void userGoesToApplicationPageEnterValidAndClicksEnter(String email, String password) {
+        Driver.getDriver().get(PropertyReader.getProperty("url"));
+        loginPage.email.sendKeys(email);
+        loginPage.password.sendKeys(password + Keys.ENTER);
+    }
+
 
 }
