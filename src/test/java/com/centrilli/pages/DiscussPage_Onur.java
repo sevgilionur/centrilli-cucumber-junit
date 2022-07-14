@@ -23,6 +23,9 @@ public class DiscussPage_Onur {
     @FindBy(xpath = "//div[@class='modal-header']")
     public WebElement expiredMessage;
 
+    @FindBy(css = "a[data-menu='68'] span")
+    public WebElement contactButton;
+
 
 
 }
