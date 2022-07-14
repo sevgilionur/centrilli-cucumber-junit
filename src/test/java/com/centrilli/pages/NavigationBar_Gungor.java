@@ -21,6 +21,11 @@ public class NavigationBar_Gungor {
     @FindBy(xpath = "//a[.=\"Log out\"]")
     private  WebElement logoutBtn;
 
+    @FindBy(css = "a[data-menu='68'] span")
+    public WebElement contactButton;
+
+
+
     public WebElement getLogoutBtn(){
         return logoutBtn;
     }
