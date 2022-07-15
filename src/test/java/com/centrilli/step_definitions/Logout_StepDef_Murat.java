@@ -51,6 +51,12 @@ public class Logout_StepDef_Murat {
 
 
     }
+
+    @Given("User on the application home page_me")
+    public void user_on_the_application_home_page_me()  {
+        loginPage.login();
+
+    }
 }
 
 

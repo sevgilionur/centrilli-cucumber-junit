@@ -1,9 +1,13 @@
 package com.centrilli.pages;
 
+import com.centrilli.utilities.BrowserUtilities;
 import com.centrilli.utilities.Driver;
+import com.centrilli.utilities.PropertyReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.io.Reader;
 
 public class LoginPage_Murat {
 
@@ -25,6 +29,18 @@ public class LoginPage_Murat {
 
     @FindBy(xpath = "//a[@class='btn btn-link pull-right']")
     public WebElement resetPasswordLink;
+
+    public void login()  {
+        Driver.getDriver().get(PropertyReader.getProperty("url"));
+        username.sendKeys(PropertyReader.getProperty("email"));
+        password.sendKeys(PropertyReader.getProperty("password"));
+        loginButton.click();
+
+
+       // BrowserUtilities.clickWithJS(logInButton);
+      //  BrowserUtils.waitFor(3);
+
+    }
 
 
   
