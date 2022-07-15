@@ -15,6 +15,7 @@ public class Logout_Step_Definitions_Onur {
     LoginPage_Onur loginPage_onur = new LoginPage_Onur();
     DiscussPage_Onur discussPage_onur= new DiscussPage_Onur();
 
+
     @When("User clicks profile dropdown menu")
     public void user_clicks_profile_dropdown_menu() throws InterruptedException {
         Thread.sleep(2000);
@@ -34,6 +35,13 @@ public class Logout_Step_Definitions_Onur {
     @Then("User logs out successfully")
     public void user_logs_out_successfully() {
         Assert.assertTrue(discussPage_onur.expiredMessage.isDisplayed());
+    }
+    
+    @Given("User goes to application page enter valid {string} and {string} clicks enter")
+    public void userGoesToApplicationPageEnterValidAndClicksEnte(String email, String password) {
+        Driver.getDriver().get(PropertyReader.getProperty("url"));
+        loginPage_onur.email.sendKeys(email);
+        loginPage_onur.password.sendKeys(password + Keys.ENTER);
     }
 
 

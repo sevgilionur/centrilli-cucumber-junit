@@ -1,7 +1,6 @@
 Feature: Logout Functionality
 
-@gungor
-
+  @gungor
     Scenario Outline:Verify that user can log out via the logout button in the profile dropdown menu.
       Given User goes to application page enter valid "<email>" and "<password>" clicks enter gy
       When user clicks on username gy
@@ -14,6 +13,7 @@ Feature: Logout Functionality
         | salesmanager16@info.com    | salesmanager     |
         | imm56@info.com             | inventorymanager |
         | expensesmanager26@info.com | expensesmanager  |
+
 
 
 
