@@ -4,6 +4,6 @@ Feature: Logout Feature
   @fy
   Scenario:
     Given User lands on the homepage fy
-    When  User clicks on dropdown menu fy
+    When  User clicks on user dropdown menu fy
     Then  User clicks on logout button fy
-    And   User logged out fy 
+    And   User logged out securely fy
