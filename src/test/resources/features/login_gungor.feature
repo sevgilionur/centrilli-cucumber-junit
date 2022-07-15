@@ -1,6 +1,6 @@
 Feature: Login Functioanality
 @gngr
-  Scenario Outline: Verify that I can login with valid credentials as salesmanager by clicking enter
+  Scenario Outline: Verify that I can login with valid credentials as salesmanager by clicking enter Gy
     When User goes to application page gy
     And User enters valid "<email>" and "<password>" and clicks enter gy
     Then User lands on homepage as salesmanager gy
@@ -10,7 +10,7 @@ Feature: Login Functioanality
       | salesmanager100@info.com | salesmanager |
 
 
-  Scenario Outline: Verify that I can login with valid credentials as salesmanager by clicking login button
+  Scenario Outline: Verify that I can login with valid credentials as salesmanager by clicking login button Gy
     When User goes to application page gy
     And User enters valid "<email>" and "<password>" gy
     And User clicks login button gy

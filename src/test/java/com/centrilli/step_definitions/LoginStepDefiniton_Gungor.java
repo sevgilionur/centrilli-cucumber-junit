@@ -16,13 +16,6 @@ public class LoginStepDefiniton_Gungor {
     LoginPage_Gungor loginpage = new LoginPage_Gungor();
     NavigationBar_Gungor navibar = new NavigationBar_Gungor();
 
-    @Given("User goes to application page enter valid {string} and {string} clicks enter")
-    public void userGoesToApplicationPageEnterValidAndClicksEnter(String email, String password) {
-        Driver.getDriver().get(PropertyReader.getProperty("url"));
-        loginpage.getEmail().sendKeys(email);
-        loginpage.getPassword().sendKeys(password + Keys.ENTER);
-    }
-
 
     @When("User goes to application page gy")
     public void userGoesToApplicationPageGy() {
@@ -47,5 +40,12 @@ public class LoginStepDefiniton_Gungor {
     @And("User clicks login button gy")
     public void userClicksLoginButtonGy() {
         loginpage.getLoginButton().click();
+    }
+
+    @Given("User goes to application page enter valid {string} and {string} clicks enterGy")
+    public void userGoesToApplicationPageEnterValidAndClicksEnterGy(String email, String password) {
+        Driver.getDriver().get(PropertyReader.getProperty("url"));
+        loginpage.getEmail().sendKeys(email);
+        loginpage.getPassword().sendKeys(password + Keys.ENTER);
     }
 }

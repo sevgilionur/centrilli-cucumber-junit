@@ -16,7 +16,7 @@ public class Logout_Step_Definitions_Onur {
     DiscussPage_Onur discussPage_onur= new DiscussPage_Onur();
 
     @Given("User goes to application page enter valid {string} and {string} clicks enter")
-    public void userGoesToApplicationPageEnterValidAndClicksEnter(String email, String password) {
+    public void userGoesToApplicationPageEnterValidAndClicksEnte(String email, String password) {
         Driver.getDriver().get(PropertyReader.getProperty("url"));
         loginPage_onur.email.sendKeys(email);
         loginPage_onur.password.sendKeys(password + Keys.ENTER);

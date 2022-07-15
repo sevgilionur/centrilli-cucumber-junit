@@ -29,7 +29,7 @@ public class LogoutStepDefinition_Gungor {
 
     @Then("user log out correctly gy")
     public void user_log_out_correctly_gy() {
-        Assert.assertEquals("Login | Best solution for startups",Driver.getDriver().getTitle());
+        Assert.assertTrue(loginpage.getPassword().isDisplayed());
     }
 
 }
