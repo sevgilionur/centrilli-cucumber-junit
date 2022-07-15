@@ -1,7 +1,6 @@
 package com.centrilli.step_definitions;
 
 import com.centrilli.pages.LoginPage_Furkan;
-import com.centrilli.pages.Logout_Furkan;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

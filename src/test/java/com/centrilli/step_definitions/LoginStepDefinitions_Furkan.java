@@ -1,7 +1,6 @@
 package com.centrilli.step_definitions;
 
 import com.centrilli.pages.LoginPage_Furkan;
-import com.centrilli.pages.Logout_Furkan;
 import com.centrilli.utilities.Driver;
 import com.centrilli.utilities.PropertyReader;
 import io.cucumber.java.en.And;
