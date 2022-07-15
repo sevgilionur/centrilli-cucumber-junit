@@ -1,6 +1,7 @@
 package com.centrilli.step_definitions;
 
 import com.centrilli.pages.LoginPage_Furkan;
+import com.centrilli.pages.LogoutPage_Furkan;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,7 +9,7 @@ import org.junit.Assert;
 
 public class LogoutStepDefs_Furkan {
     LoginPage_Furkan loginPageFurkan=new LoginPage_Furkan();
-    Logout_Furkan logout_furkan=new Logout_Furkan();
+    LogoutPage_Furkan logout_furkan=new LogoutPage_Furkan();
 
 
     @Given("User lands on the homepage fy")
@@ -19,7 +20,7 @@ public class LogoutStepDefs_Furkan {
 
     @When("User clicks on user dropdown menu fy")
     public void user_clicks_on_user_dropdown_menu_fy() {
-       logout_furkan.userDropdownButton.click();
+       logout_furkan.dropdownButton.click();
     }
 
     @Then("User clicks on logout button fy")
