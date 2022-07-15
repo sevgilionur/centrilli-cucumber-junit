@@ -1,6 +1,7 @@
 package com.centrilli.step_definitions;
 
 import com.centrilli.pages.LoginPage_Furkan;
+import com.centrilli.pages.LogoutPage_Furkan;
 import com.centrilli.utilities.Driver;
 import com.centrilli.utilities.PropertyReader;
 import io.cucumber.java.en.And;
@@ -11,6 +12,7 @@ import org.junit.Assert;
 public class LoginStepDefinitions_Furkan {
 
     LoginPage_Furkan loginPage=new LoginPage_Furkan();
+    LogoutPage_Furkan logout_furkan=new LogoutPage_Furkan();
 
     @When("User goes to login page FY")
     public void user_goes_to_login_page_fy() {

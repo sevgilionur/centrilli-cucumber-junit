@@ -1,16 +1,13 @@
 package com.centrilli.pages;
 
 import com.centrilli.utilities.Driver;
-import com.centrilli.utilities.PropertyReader;
-import io.cucumber.java.en.Given;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage_Gungor {
+public class LoginPageob {
 
-    public LoginPage_Gungor(){
+    public LoginPageob(){
 
         PageFactory.initElements(Driver.getDriver(), this);
 
@@ -59,5 +56,3 @@ public class LoginPage_Gungor {
         email.getText();
     }
 }
-
-
