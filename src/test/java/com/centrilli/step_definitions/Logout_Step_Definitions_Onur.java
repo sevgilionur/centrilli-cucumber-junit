@@ -36,14 +36,6 @@ public class Logout_Step_Definitions_Onur {
     public void user_logs_out_successfully() {
         Assert.assertTrue(discussPage_onur.expiredMessage.isDisplayed());
     }
-    
-    @Given("User goes to application page enter valid {string} and {string} clicks enter")
-    public void userGoesToApplicationPageEnterValidAndClicksEnte(String email, String password) {
-        Driver.getDriver().get(PropertyReader.getProperty("url"));
-        loginPage_onur.email.sendKeys(email);
-        loginPage_onur.password.sendKeys(password + Keys.ENTER);
-    }
-
 
 
 }

@@ -14,9 +14,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/centrilli/step_definitions",
         dryRun = false,
-        tags = "@contact",
+        tags = "@logout_os",
         publish = true
-
 
 )
 public class RunnerClass {
