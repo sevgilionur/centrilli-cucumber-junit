@@ -60,7 +60,6 @@ Feature: Login Functionality
     And  User click on login button
     Then User on homepage as expense manager
     Examples:
-    Examples:
       | email                      | password        |
       | expensesmanager20@info.com | expensesmanager |
       | expensesmanager21@info.com | expensesmanager |

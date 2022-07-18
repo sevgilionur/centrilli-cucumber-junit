@@ -13,7 +13,7 @@ public class ContactPage_YHY {
     @FindBy(xpath = "//button[@accesskey='c']")
     public WebElement createButton;
 
-    @FindBy(id = "o_field_input_334")
+    @FindBy(id = "o_field_input_325")
     public WebElement nameInputBox;
 
     @FindBy (id="o_field_input_338")

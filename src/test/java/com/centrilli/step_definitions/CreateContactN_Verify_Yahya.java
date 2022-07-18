@@ -37,6 +37,7 @@ public class CreateContactN_Verify_Yahya {
     @When("User click on create button")
     public void user_click_on_create_button() {
         contactPage_yhy.createButton.click();
+
     }
     @When("User fills the new contact form and clicks save button")
     public void user_fills_the_new_contact_form_and_clicks_save_button() {
@@ -44,6 +45,7 @@ public class CreateContactN_Verify_Yahya {
         contactPage_yhy.nameInputBox.sendKeys(name);
         contactPage_yhy.adressbox.sendKeys(adress);
         contactPage_yhy.saveButton.click();
+
         wait.until(ExpectedConditions.titleContains(name));
     }
 
